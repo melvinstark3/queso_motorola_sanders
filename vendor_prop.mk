@@ -202,6 +202,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.location.osnlp.package=com.google.android.gms \
     ro.location.osnlp.region.package=""
 
+# Set lmkd options
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lmk.low=1001 \
+    ro.lmk.medium=0 \
+    ro.lmk.critical=0 \
+    ro.lmk.critical_upgrade=false \
+    ro.lmk.upgrade_pressure=100 \
+    ro.lmk.downgrade_pressure=100 \
+    ro.lmk.kill_heaviest_task=true \
+    ro.lmk.kill_timeout_ms=100
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
