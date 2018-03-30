@@ -205,7 +205,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Set lmkd options
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.low=1001 \
-    ro.lmk.medium=0 \
+    ro.lmk.medium=800 \
     ro.lmk.critical=0 \
     ro.lmk.critical_upgrade=false \
     ro.lmk.upgrade_pressure=100 \
