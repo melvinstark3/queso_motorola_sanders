@@ -150,6 +150,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_rotator_downscale=1
 
+# Inline Rotator
+PRODUCT_PROPERTY_OVERRIDES += \
+    vendor.display.disable_inline_rotator=1
+
 # FM
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.fm.transmitter=false \
