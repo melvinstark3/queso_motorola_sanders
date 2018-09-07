@@ -193,6 +193,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.qcom_parser=135715 \
     ro.surface_flinger.protected_contents=false \
     mm.enable.sec.smoothstreaming=true \
+    media.stagefright.thumbnail.prefer_hw_codecs=true \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true
 
