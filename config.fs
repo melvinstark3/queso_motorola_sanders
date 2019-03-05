@@ -85,6 +85,18 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE
 
+[vendor/bin/loc_launcher]
+mode: 0755
+user:  AID_GPS
+group: AID_GPS
+caps: SETUID SETGID
+
+[system/vendor/bin/loc_launcher]
+mode: 0755
+user:  AID_GPS
+group: AID_GPS
+caps: SETUID SETGID
+
 [vendor/bin/mm-qcamera-daemon]
 mode: 0700
 user: AID_CAMERA
