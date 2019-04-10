@@ -6,7 +6,6 @@ LOCAL_PATH := $(call my-dir)
 # However, some of those libs need FWK-ONLY libs, which must be listed here
 # manually.
 VNDK_SP_LIBRARIES := \
-    libdexfile \
     libdexfile_support 
 install_in_hw_dir := \
    android.hidl.memory@1.0-impl
