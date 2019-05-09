@@ -1,4 +1,4 @@
-#
+\#
 # Copyright (C) 2017-2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/arrow_sanders.mk
+	$(LOCAL_DIR)/bootleg_sanders.mk
 
 COMMON_LUNCH_CHOICES := \
-	arrow_sanders-userdebug
+	bootleg_sanders-userdebug
