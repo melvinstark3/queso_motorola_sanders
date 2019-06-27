@@ -571,11 +571,19 @@ service vendor.thermal-engine /vendor/bin/thermal-engine
    group root
    writepid /dev/cpuset/system-background/tasks
 
-service vendor.time_daemon /vendor/bin/time_daemon
+service time_daemon /vendor/bin/time_daemon
    class main
    user system
    group system
+   capabilities SYS_TIME
    writepid /dev/cpuset/system-background/tasks
+
+service vendor.move_time_data /system/bin/move_time_data.sh
+    class main
+    user system
+    group system
+    disabled
+    oneshot
 
 service audiod /vendor/bin/audiod
    class late_start
