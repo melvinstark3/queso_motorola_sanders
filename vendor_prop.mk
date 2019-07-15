@@ -43,6 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.parser.ip.buffer.size=262144 \
     vendor.audio.playback.mch.downsample=true \
     vendor.audio.safx.pbe.enabled=true \
+    vendor.audio.feature.multi_voice_session.enable=true \
     vendor.audio.tunnel.encode=false \
     ro.config.media_vol_steps=25 \
     vendor.use.voice.path.for.pcm.voip=false \
