@@ -309,6 +309,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.is_wps_enabled=true \
     persist.vendor.radio.mt_sms_ack=30 \
+    persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.0x9e_not_callname=1 \
     persist.vendor.radio.multisim_switch_support=true \
     persist.radio.reboot_on_modem_change=true \
