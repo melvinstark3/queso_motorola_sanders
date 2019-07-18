@@ -1,4 +1,4 @@
-#
+nan#
 # vendor props for sanders
 #
 
@@ -219,6 +219,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
+    debug.stagefright.omx_default_rank.sw-audio=1 \
+    debug.stagefright.omx_default_rank=0 \
     media.aac_51_output_enabled=true \
     media.settings.xml=/vendor/etc/media_profiles.xml \
     mm.enable.qcom_parser=135715 \
