@@ -138,15 +138,10 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
-    <!-- Spectrum Profiles -->
-    <string name="spectrum_title">Kernel Profile</string>
-    <string name="spectrum_summary">Choose your kernel profile</string>
-    <string name="spectrum_dialogTitle">Choose your kernel profile</string>
- 
     <!-- Headers -->
     <string name="displayheader">Display</string>
     <string name="gesturesheader">Gestures</string>
-    <string name="extrasheader">Extras</string>
+    <string name="extrasheader">Dirac</string>
 
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">Dirac Sound</string>
