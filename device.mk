@@ -428,6 +428,7 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
+    libgpu_mapper_shim \
     libqsap_shim
 
 # Soong namespaces
