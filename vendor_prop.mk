@@ -361,6 +361,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.lte.volte_call_capable=true \
     service.qti.ims.enabled=1 \
     persist.vendor.radio.RATE_ADAPT_ENABLE=1
+    persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
