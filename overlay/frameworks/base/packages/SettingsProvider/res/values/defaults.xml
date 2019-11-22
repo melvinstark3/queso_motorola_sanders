@@ -22,4 +22,7 @@
 
     <!-- Disable bluetooth by default -->
     <bool name="def_bluetooth_on">false</bool>
+
+    <!-- Default for Settings.Global.APPLY_RAMPING_RINGER -->
+    <bool name="def_apply_ramping_ringer">true</bool>
 </resources>
