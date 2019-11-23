@@ -57,6 +57,9 @@
     <!-- Flag to enable VVM3 visual voicemail. VVM3 is used by Verizon Wireless. -->
     <bool name="vvm3_enabled">true</bool>
 
+    <!-- Flag indicating whether the device supports RTT (real-time text) -->
+    <bool name="config_support_rtt">false</bool>
+
     <!-- This device requires that emergency calls are placed over the default data SIM when
          possible because GNSS SUPL can only be received from the network on data subscription. -->
     <bool name="config_gnss_supl_requires_default_data_for_emergency">true</bool>
