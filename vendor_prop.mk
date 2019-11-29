@@ -304,6 +304,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.domain.ps=0 \
     persist.radio.sar_sensor=1 \
     persist.vendor.radio.sib16_support=1 \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.radio.sib16_support=1 \
     persist.vendor.radio.rat_on=combine \
     ro.telephony.call_ring.multiple=false \
