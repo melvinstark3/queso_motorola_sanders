@@ -193,10 +193,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MotoPocketMode
 
-# Fwk-detect
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect
-
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
@@ -374,6 +370,11 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/powerhint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/powerhint.xml
 
 # Qualcomm
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-oem.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-oem.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
