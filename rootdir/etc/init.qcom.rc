@@ -537,7 +537,7 @@ on post-fs-data
 
     setprop vold.post_fs_data_done 1
 
-service charger /charger
+service vendor.charger /system/bin/charger
     class charger
     user system
     capabilities SYS_BOOT
