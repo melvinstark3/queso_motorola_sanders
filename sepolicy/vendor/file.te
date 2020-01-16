@@ -1,9 +1,6 @@
 # ADSP
 type adspd_data_file, file_type, data_file_type, core_data_file_type;
 
-# charge_only_mode
-type chargeonly_data_file, file_type, data_file_type, core_data_file_type;
-
 # FSG
 type fsg_file, fs_type, contextmount_type;
 
@@ -62,3 +59,6 @@ type camera_socket, file_type, data_file_type, core_data_file_type;
 type sysfs_screen_off_gestures, fs_type, sysfs_type, mlstrustedobject;
 type avb_file, file_type;
 type sysfs_fpc_proximity, sysfs_type, fs_type;
+
+# Kcal
+type kcal_dev, sysfs_type, fs_type;
