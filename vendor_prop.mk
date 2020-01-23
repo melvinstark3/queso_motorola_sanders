@@ -215,7 +215,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.lmk.kill_heaviest_task=true \
     ro.lmk.kill_timeout_ms=15 \
     ro.lmk.use_minfree_levels=true \
-    ro.lmk.use_minfree_levels=true \
     ro.lmk.enhance_batch_kill=true \
     ro.lmk.vmpressure_file_min=80640
 
@@ -431,15 +430,6 @@ persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1 \
 persist.radio.data_lte_sys_ind=1
 
-# Spectrum
-PRODUCT_PROPERTY_OVERRIDES += \
-    spectrum.support=1 \
-    persist.spectrum.kernel=MAYHEM
-
-# Create Swap disk, if below sys-prop enabled & also if device has lower (< 1 GB) RAM
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.config.swap=true
-
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.fha_enable=true \
@@ -451,6 +441,26 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.dha_th_rate=2.3 \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8
+
+# VM properties to make phone actually usable
+# Why does this even work
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    ro.sys.fw.bg_apps_limit=60 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=8 \
+    dalvik.vm.image-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-filter=speed \
+    dalvik.vm.image-dex2oat-filter=speed \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
+
+#DRM
+PRODUCT_PROPERTY_OVERRIDES += \
     drm.service.enabled=true \
     media.stagefright.thumbnail.prefer_hw_codecs=true
 
