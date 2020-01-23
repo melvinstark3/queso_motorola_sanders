@@ -863,7 +863,7 @@ service dhcpcd_bnep4 /system/bin/dhcpcd -BKLG
 service vendor.loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
-    group gps
+    group gps inet diag wifi
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
