@@ -125,6 +125,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=0 \
     debug.sf.early_phase_offset_ns=5000000 \
     debug.sf.latch_unsignaled=0 \
+    sdm.perf_hint_window=50 \
     persist.hwc.mdpcomp.enable=true \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
