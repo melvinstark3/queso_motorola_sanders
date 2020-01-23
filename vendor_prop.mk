@@ -106,17 +106,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # core_ctrl
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=4
+    ro.vendor.qti.core_ctl_max_cpu=8
 
-# Dalvik
+# Disable rotator split feature
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapgrowthlimit=256m \
-    dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    ro.dalvik.vm.native.bridge=0
+    sdm.debug.disable_rotator_split=1
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
