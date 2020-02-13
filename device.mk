@@ -443,6 +443,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libqsap_shim
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    device/motorola/sanders
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
