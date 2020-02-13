@@ -103,11 +103,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.qfp=false
 
-# core_ctrl
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.core_ctl_min_cpu=2 \
-    ro.vendor.qti.core_ctl_max_cpu=8
-
 # Disable rotator split feature
 PRODUCT_PROPERTY_OVERRIDES += \
     sdm.debug.disable_rotator_split=1
