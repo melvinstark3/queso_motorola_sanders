@@ -1,4 +1,4 @@
-nan#
+#
 # vendor props for sanders
 #
 
@@ -78,6 +78,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.debug.logfile=0 \
     persist.camera.gyro.disable=0 \
     persist.camera.eis.enable=1 \
+    persist.camera.is_type=5 \
+    persist.camera.gzoom.at=0 \
+    persist.camera.googfd.enable=1 \
+    persist.camera.max.previewfps=60 \
+    vidc.enc.dcvs.extra-buff-count=2 \
     persist.camera.HAL3.enabled=1 \
     persist.camera.expose.aux=1 \
     vidc.enc.dcvs.extra-buff-count=2 \
