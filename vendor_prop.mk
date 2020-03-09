@@ -451,7 +451,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
+    dalvik.vm.heapmaxfree=8m \
+    dalvik.vm.stack-trace-dir=/data/anr
 
 #DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -464,4 +465,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
-sys.vendor.shutdown.waittime=500
+    sys.vendor.shutdown.waittime=500
+
+# Misc
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.nfc_nci=pn54x \
+    persist.mot.gps.smart_battery=1
