@@ -355,6 +355,10 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/perf/targetconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetconfig.xml \
      $(LOCAL_PATH)/configs/perf/targetresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/targetresourceconfigs.xml
 
+# Permissions (Google)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/default-permissions-google.xml:system/product/etc/default-permissions/default-permissions-google.xml
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
