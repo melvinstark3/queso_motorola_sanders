@@ -36,8 +36,6 @@ PRODUCT_DEVICE := sanders
 PRODUCT_NAME := bootleg_sanders
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
-
-PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 PRODUCT_MODEL := Moto G (5S) Plus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -46,10 +44,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36-14 63857 release-keys"
 
 # FINGERPRINT
-BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200305.003/6156912:user/release-keys
+BUILD_FINGERPRINT := google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.fingerprint="google/coral/coral:10/QQ2A.200305.003/6156912:user/release-keys"
+    ro.build.fingerprint="google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys"
 
 # for specific
 $(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
