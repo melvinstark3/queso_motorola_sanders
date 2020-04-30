@@ -420,7 +420,7 @@ on post-fs-data
     mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
 
     # Create the directories used by the Wireless subsystem
-    mkdir /data/vendor/wifi 0770 wifi wifi
+    mkdir /data/vendor/wifi 0771 wifi wifi
     mkdir /data/vendor/wifi/sockets 0770 wifi wifi
     mkdir /data/vendor/wifi/hostapd 0770 wifi wifi
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
@@ -513,8 +513,8 @@ on post-fs-data
     #mkdir /data/data/media 0770 media media
 
     #Create FM dir for patchdownloader
-    mkdir /data/misc/fm 0770 system system
-    chmod 0770 /data/misc/fm
+    mkdir /data/vendor/fm 0770 system system
+    chmod 0770 /data/vendor/fm
 
     # RIDL data
     mkdir /data/misc/SelfHost/ 0710 system shell
@@ -934,6 +934,23 @@ service ssr_setup /vendor/bin/ssr_setup
 on property:persist.sys.ssr.restart_level=*
     start ssr_setup
 
+service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
+    override
+    class hal
+    user audioserver
+    # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
+    capabilities BLOCK_SUSPEND
+    ioprio rt 4
+    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    # audioflinger restarts itself when it loses connection with the hal
+    # and its .rc file has an "onrestart restart audio-hal" rule, thus
+    # an additional auto-restart from the init process isn't needed.
+    oneshot
+    interface android.hardware.audio@5.0::IDevicesFactory default
+    interface android.hardware.audio@4.0::IDevicesFactory default
+    interface android.hardware.audio@2.0::IDevicesFactory default
+
 on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
@@ -1079,7 +1096,7 @@ on property:ro.boot.ram=4GB
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
     write /sys/module/process_reclaim/parameters/pressure_min 50
     write /sys/module/process_reclaim/parameters/per_swap_size 512
-    write /sys/module/lowmemorykiller/parameters/minfree "15360,19200,23040,26880,34415,43737"
+    write /sys/module/lowmemorykiller/parameters/minfree "18432,23040,27648,32256,36864,46080"
 
     #Reset the "read ahead" setting for system patition
     # result: ext4: 32KB, dm_verity:64KB, block layer: 128KB
